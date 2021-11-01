@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>課題HTML編</title>
+</head>
+<body>
+  <h1>課題HTML編</h1>
+  <a href="https://google.com" target="_blank">ここをクリックするとGoogleのページが新しいタブで開く</a>
+  <h2>テーブルの練習</h2>
+  <h3>成分表</h3>
+  <table border="1">
+    <tbody>
+      <tr>
+        <th rowspan="2">料理名</th>
+        <th rowspan="2">重量(g)</th>
+        <th colspan="2">エネルギー(kcal)</th>
+      </tr>
+      <tr>
+        <th>現在の計算方法</th>
+        <th>昔の計算方法</th>
+      </tr>
+      <tr>
+        <td>ごはん</td>
+        <td>150</td>
+        <td>235.5</td>
+        <td>252.0</td>
+      </tr>
+      <tr>
+        <td>とんかつ</td>
+        <td>100</td>
+        <td>429.0</td>
+        <td>450.0</td>
+      </tr>
+      <tr>
+        <td>トマト</td>
+        <td>50</td>
+        <td>10</td>
+        <td>9.5</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>テーブルクイズ</h3>
+  <table border="1">
+    <tbody>
+      <tr>
+        <td rowspan="3" colspan="2">Q</td>
+        <td rowspan="2" colspan="3">Q</td>
+        <td>Q</td>
+      </tr>
+      <tr>
+        <td>Q</td>
+      </tr>
+      <tr>
+        <td>Q</td>
+        <td>Q</td>
+        <td colspan="2">Q</td>
+      </tr>
+      <tr>
+        <td rowspan="3">Q</td>
+        <td rowspan="2" colspan="2">Q</td>
+        <td>Q</td>
+        <td>Q</td>
+        <td>Q</td>
+      </tr>
+      <tr>
+        <td colspan="3">Q</td>
+      </tr>
+      <tr>
+        <td>Q</td>
+        <td>Q</td>
+        <td>Q</td>
+        <td colspan="2">Q</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2>form練習</h2>
+  <h3>問い合わせフォーム</h3>
+  <form action method="post">
+    ●姓:
+    <input type="text" name="last_name">
+    ●名:
+    <input type="text" name="first_name">
+    <br>
+    ●年齢:
+    <input type="number" name="age" min="0">
+    ※数字以外は入力できず、負の値は入力できない
+    <br>
+    ●性別:※テキストをクリックしても選択できること。
+    <br>
+    <label for="female">女性</label>
+    <input type="radio" name="gender" value="1" id="female" checked="checked">
+    <label for="male">男性</label>
+    <input type="radio" name="gender" value="0" id="male">
+    <label for="other_gender">その他</label>
+    <input type="radio" name="gender" value="2" id="other_gender">
+    <br>
+    ●問い合わせ内容※テキストをクリックしても選択できること。
+    <br>
+    <input type="checkbox" name="inquiry" value="0" id="detail">
+    <label for="detail">詳細を知りたい</label>
+    <br>
+    <input type="checkbox" name="inquiry" value="1" id="cost" checked="checked">
+    <label for="cost">料金について</label>
+    <br>
+    <input type="checkbox" name="inquiry" value="2" id="support">
+    <label for="support">サポートについて</label>
+    <br>
+    <input type="checkbox" name="inquiry" value="3" id="refund">
+    <label for="refund">返金制度について</label>
+    <br>
+    <input type="checkbox" name="inquiry" value="4" id="other">
+    <label for="other">その他</label>
+    <br>
+    ●お住まいの地域:
+    <br>
+    <select name="area">
+      <option value="0">東京都</option>
+      <option value="1">千葉県</option>
+      <option value="2" selected="selected">神奈川県</option>
+      <option value="3">山梨県</option>
+      <option value="4">埼玉県</option>
+    </select>
+    <br>
+    ●その他:
+    <br>
+    <textarea name="other_inquiry"></textarea>
+    <br>
+    <input type="submit" value="送信">
+  </form>
+</body>
+</html>
